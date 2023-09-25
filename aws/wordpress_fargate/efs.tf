@@ -1,7 +1,4 @@
-resource "aws_efs_file_system" "this" {
-  creation_token = "${var.prefix}-${var.environment}"
-  tags           = var.tags
-}
+
 
 resource "aws_efs_mount_target" "this" {
   count          = length(module.vpc.private_subnets)
