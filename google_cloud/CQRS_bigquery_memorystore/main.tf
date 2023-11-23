@@ -39,10 +39,10 @@ module "version" {
   path   = "."
 }
 
-resource "google_storage_bucket" "code" {
+/* resource "google_storage_bucket" "code" {
   name     = "${local.project}_code"
   location = "EU"
-}
+} */
 
 resource "google_storage_bucket_object" "config_file" {
   name   = "config.json"
